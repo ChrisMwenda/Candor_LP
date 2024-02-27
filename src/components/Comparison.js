@@ -4,7 +4,6 @@ import WithCandor from "./Assets/With_Candor.png";
 import WithoutCandor from "./Assets/candor_current_mail.png";
 import {
   Grid,
-  Box,
   Card,
   CardContent,
   CardMedia,
@@ -28,20 +27,6 @@ const Comparison = () => {
           onSelect={handleTabChange}
         />
         <Card variant="outlined" sx={{mt:"5%"}}>
-          {/* <Box
-            sx={{
-              m: "auto",
-              width: { xs: "95%", lg: "100%" },
-              height: 600,
-              backgroundSize: { xs: "contain", lg: "cover" }, // Adjusted to cover the entire area
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundImage: (theme) =>
-                statusTab === "With Candor"
-                  ? `url(${WithCandor})`
-                  : `url(${WithoutCandor})`,
-            }}
-          /> */}
           <CardContent>
             <Typography variant="subtitle1" textAlign="center">
               {statusTab === "With Candor"

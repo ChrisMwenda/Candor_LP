@@ -1,7 +1,5 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { CssBaseline, ThemeProvider, createTheme, Divider, Box } from '@mui/material';
-import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import AppAppBar from './components/AppAppBar';
 import Hero from './components/Hero';
 import LogoCollection from './components/LogoCollection';
@@ -15,7 +13,6 @@ import getLPTheme from './getLPTheme';
 import Body from './components/Body';
 import Comparison from './components/Comparison';
 
-const defaultTheme = createTheme({});
 
 export default function LandingPage() {
   const [mode, setMode] = React.useState('light');
