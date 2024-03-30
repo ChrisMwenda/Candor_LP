@@ -2,6 +2,7 @@ import * as React from 'react';
 import { CssBaseline, ThemeProvider, createTheme, Divider, Box } from '@mui/material';
 import AppAppBar from './components/AppAppBar';
 import Hero from './components/Hero';
+import MainHero from './components/MainHero';
 import LogoCollection from './components/LogoCollection';
 import Highlights from './components/Highlights';
 import Pricing from './components/Pricing';
@@ -26,6 +27,7 @@ export default function LandingPage() {
     <ThemeProvider theme={LPtheme}>
       <CssBaseline />
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
+      <MainHero />
       <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
         <LogoCollection />

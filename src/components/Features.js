@@ -1,41 +1,44 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import Chip from '@mui/material/Chip';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
-import OldWay from "./Assets/candor_current_mail.png"
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import Chip from "@mui/material/Chip";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
+import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
+import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
+import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
+import OldWay from "./Assets/candor_current_mail.png";
+import NewWay from "./Assets/With_Candor.png";
 
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
-    title: 'Humanize Your Recruitment Process',
+    title: "Humanize Your Recruitment Process",
     description:
-      'Stop ghosting applicants, and give personalized feedback that shows you care about every applicant..',
-    imageLight:{OldWay}, 
-    imageDark: {OldWay},
+      "Stop ghosting applicants, and give personalized feedback that shows you care about every applicant..",
+    imageLight: OldWay,
+    imageDark: OldWay,
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
-    title: 'Build Your Brand',
-    description:'Impress candidates with your professionalism and commitment to providing a positive candidate experience',
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+    title: "Build Your Brand",
+    description:
+      "Impress candidates with your professionalism and commitment to providing a positive candidate experience",
+    imageLight: NewWay,
+    imageDark: NewWay,
   },
   {
     icon: <DevicesRoundedIcon />,
-    title: 'Stand Out From the Rest',
-    description: 'Everyone else uses the same cookie cutter rejection emails. Stand out from the competition and attract top talent by demonstrating your respect and value for candidates',
-    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+    title: "Stand Out From the Rest",
+    description:
+      "Everyone else uses the same cookie cutter rejection emails. Stand out from the competition and attract top talent by demonstrating your respect and value for candidates",
+    imageLight: OldWay,
+    imageDark: OldWay,
   },
 ];
 
@@ -51,7 +54,7 @@ export default function Features() {
   return (
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
       <Grid container spacing={6}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={4}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
               Product features
@@ -62,11 +65,16 @@ export default function Features() {
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
               Here you can provide a brief overview of the key features of the
-              product. For example, you could list the number of features, the types
-              of features, add-ons, or the benefits of the features.
+              product. For example, you could list the number of features, the
+              types of features, add-ons, or the benefits of the features.
             </Typography>
           </div>
-          <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
+          <Grid
+            container
+            item
+            gap={1}
+            sx={{ display: { xs: "auto", sm: "none" } }}
+          >
             {items.map(({ title }, index) => (
               <Chip
                 key={index}
@@ -74,20 +82,21 @@ export default function Features() {
                 onClick={() => handleItemClick(index)}
                 sx={{
                   borderColor: (theme) => {
-                    if (theme.palette.mode === 'light') {
-                      return selectedItemIndex === index ? 'primary.light' : '';
+                    if (theme.palette.mode === "light") {
+                      return selectedItemIndex === index ? "primary.light" : "";
                     }
-                    return selectedItemIndex === index ? 'primary.light' : '';
+                    return selectedItemIndex === index ? "primary.light" : "";
                   },
                   background: (theme) => {
-                    if (theme.palette.mode === 'light') {
-                      return selectedItemIndex === index ? 'none' : '';
+                    if (theme.palette.mode === "light") {
+                      return selectedItemIndex === index ? "none" : "";
                     }
-                    return selectedItemIndex === index ? 'none' : '';
+                    return selectedItemIndex === index ? "none" : "";
                   },
-                  backgroundColor: selectedItemIndex === index ? 'primary.main' : '',
-                  '& .MuiChip-label': {
-                    color: selectedItemIndex === index ? '#fff' : '',
+                  backgroundColor:
+                    selectedItemIndex === index ? "primary.main" : "",
+                  "& .MuiChip-label": {
+                    color: selectedItemIndex === index ? "#fff" : "",
                   },
                 }}
               />
@@ -97,26 +106,34 @@ export default function Features() {
             component={Card}
             variant="outlined"
             sx={{
-              display: { xs: 'auto', sm: 'none' },
+              display: { xs: "auto", sm: "none" },
               mt: 4,
             }}
           >
             <Box
               sx={{
                 backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
+                  theme.palette.mode === "light"
                     ? items[selectedItemIndex].imageLight
                     : items[selectedItemIndex].imageDark,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
                 minHeight: 280,
               }}
             />
             <Box sx={{ px: 2, pb: 2 }}>
-              <Typography color="text.primary" variant="body2" fontWeight="bold">
+              <Typography
+                color="text.primary"
+                variant="body2"
+                fontWeight="bold"
+              >
                 {selectedFeature.title}
               </Typography>
-              <Typography color="text.secondary" variant="body2" sx={{ my: 0.5 }}>
+              <Typography
+                color="text.secondary"
+                variant="body2"
+                sx={{ my: 0.5 }}
+              >
                 {selectedFeature.description}
               </Typography>
               <Link
@@ -124,16 +141,16 @@ export default function Features() {
                 variant="body2"
                 fontWeight="bold"
                 sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  '& > svg': { transition: '0.2s' },
-                  '&:hover > svg': { transform: 'translateX(2px)' },
+                  display: "inline-flex",
+                  alignItems: "center",
+                  "& > svg": { transition: "0.2s" },
+                  "&:hover > svg": { transform: "translateX(2px)" },
                 }}
               >
                 <span>Learn more</span>
                 <ChevronRightRoundedIcon
                   fontSize="small"
-                  sx={{ mt: '1px', ml: '2px' }}
+                  sx={{ mt: "1px", ml: "2px" }}
                 />
               </Link>
             </Box>
@@ -144,7 +161,7 @@ export default function Features() {
             alignItems="flex-start"
             spacing={2}
             useFlexGap
-            sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
+            sx={{ width: "100%", display: { xs: "none", sm: "flex" } }}
           >
             {items.map(({ icon, title, description }, index) => (
               <Card
@@ -153,42 +170,44 @@ export default function Features() {
                 onClick={() => handleItemClick(index)}
                 sx={{
                   p: 3,
-                  height: 'fit-content',
-                  width: '100%',
-                  background: 'none',
+                  height: "fit-content",
+                  width: "100%",
+                  background: "none",
                   backgroundColor:
-                    selectedItemIndex === index ? 'action.selected' : undefined,
+                    selectedItemIndex === index ? "action.selected" : undefined,
                   borderColor: (theme) => {
-                    if (theme.palette.mode === 'light') {
+                    if (theme.palette.mode === "light") {
                       return selectedItemIndex === index
-                        ? 'primary.light'
-                        : 'grey.200';
+                        ? "primary.light"
+                        : "grey.200";
                     }
-                    return selectedItemIndex === index ? 'primary.dark' : 'grey.800';
+                    return selectedItemIndex === index
+                      ? "primary.dark"
+                      : "grey.800";
                   },
                 }}
               >
                 <Box
                   sx={{
-                    width: '100%',
-                    display: 'flex',
-                    textAlign: 'left',
-                    flexDirection: { xs: 'column', md: 'row' },
-                    alignItems: { md: 'center' },
+                    width: "100%",
+                    display: "flex",
+                    textAlign: "left",
+                    flexDirection: { xs: "column", md: "row" },
+                    alignItems: { md: "center" },
                     gap: 2.5,
                   }}
                 >
                   <Box
                     sx={{
                       color: (theme) => {
-                        if (theme.palette.mode === 'light') {
+                        if (theme.palette.mode === "light") {
                           return selectedItemIndex === index
-                            ? 'primary.main'
-                            : 'grey.300';
+                            ? "primary.main"
+                            : "grey.300";
                         }
                         return selectedItemIndex === index
-                          ? 'primary.main'
-                          : 'grey.700';
+                          ? "primary.main"
+                          : "grey.700";
                       },
                     }}
                   >
@@ -214,10 +233,10 @@ export default function Features() {
                       variant="body2"
                       fontWeight="bold"
                       sx={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        '& > svg': { transition: '0.2s' },
-                        '&:hover > svg': { transform: 'translateX(2px)' },
+                        display: "inline-flex",
+                        alignItems: "center",
+                        "& > svg": { transition: "0.2s" },
+                        "&:hover > svg": { transform: "translateX(2px)" },
                       }}
                       onClick={(event) => {
                         event.stopPropagation();
@@ -226,7 +245,7 @@ export default function Features() {
                       <span>Learn more</span>
                       <ChevronRightRoundedIcon
                         fontSize="small"
-                        sx={{ mt: '1px', ml: '2px' }}
+                        sx={{ mt: "1px", ml: "2px" }}
                       />
                     </Link>
                   </div>
@@ -238,28 +257,29 @@ export default function Features() {
         <Grid
           item
           xs={12}
-          md={6}
-          sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}
+          md={8}
+          sx={{ display: { xs: "none", sm: "flex" }, width: "100%" }}
         >
           <Card
             variant="outlined"
             sx={{
-              height: '100%',
-              width: '100%',
-              display: { xs: 'none', sm: 'flex' },
-              pointerEvents: 'none',
+              height: "100%",
+              width: "100%",
+              display: { xs: "none", sm: "flex" },
+              pointerEvents: "none",
             }}
           >
             <Box
               sx={{
-                m: 'auto',
-                width: 420,
+                m: "auto",
+                width:"100%",
                 height: 500,
-                backgroundSize: 'contain',
+                backgroundSize: "cover", // Change to cover to magnify the image
+                backgroundRepeat: "no-repeat",
                 backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
+                  theme.palette.mode === "light"
+                    ? `url(${selectedFeature.imageLight})`
+                    : `url(${selectedFeature.imageDark})`,
               }}
             />
           </Card>

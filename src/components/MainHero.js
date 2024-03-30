@@ -7,7 +7,7 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
-export default function Hero() {
+export default function MainHero() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -26,10 +26,10 @@ export default function Hero() {
       sx={(theme) => ({
         width: "100%",
         backgroundImage:
-          theme.palette.mode === "light"
-            ? "linear-gradient(180deg, #d4bff5, #FFF)"
-            : "linear-gradient(#42024f, #0f0910)",
-        backgroundSize: "100% 20%",
+        theme.palette.mode === "light"
+          ? "linear-gradient(180deg, #bff4f5,#d4bff5)"
+          : "linear-gradient(#42024f, #0f0910)",
+        backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
       })}
     >
@@ -43,21 +43,33 @@ export default function Hero() {
         }}
       >
         <Stack spacing={2} useFlexGap sx={{ width: { xs: "100%", sm: "70%" } }}>
-          <Typography variant="h5" textAlign="center" color="text.secondary">
-            Hiring Managers, Recruiters, and Interviewers{" "}
-          </Typography>
+          <div
+            style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}
+          >
+            <iframe
+              src="https://www.loom.com/embed/6492f66aa17549f4b28f812f76e41339?sid=b5c93515-926f-4796-bbbb-26c8908315ad"
+              frameBorder="0"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+              }}
+            ></iframe>
+          </div>
 
           <Typography
             component="h1"
             variant="h1"
             sx={{
-              display: "flex",
               flexDirection: { xs: "column", md: "row" },
               alignSelf: "center",
               textAlign: "center",
             }}
           >
-            Don't be a&nbsp;
+            Give Personalized Feebdack to Candidates&nbsp;
             <Typography
               component="span"
               variant="h1"
@@ -68,25 +80,47 @@ export default function Hero() {
                     : "primary.light",
               }}
             >
-              Jerk
+              In Seconds
             </Typography>
           </Typography>
           <Typography variant="body1" textAlign="center" color="text.secondary">
-            We get it...You're{" "}
-            <span style={{ fontWeight: "bold" }}>
-              {" "}
-              sorting through 100s of applications, racing against deadlines,
-              and competing for the best{" "}
-            </span>
-            . But those applicants you left hanging? They don't see it that way.
-            They're{" "}
-            <span style={{ fontWeight: "bold" }}>
-              anxious, frustrated and probably think your company is a bunch of
-              jerks.{" "}
-            </span>{" "}
-            Even worse, they'll tell their friends about it.
+            We help you generate thoughtful, personalized feedback for
+            candidates of applicants within seconds.
           </Typography>
-        
+
+          <form
+            onSubmit={handleSubmit}
+            name="contact"
+            method="post"
+            netlify
+            netlify-honeypot="bot-field"
+            hidden
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <TextField
+              id="outlined-basic"
+              label="Your email address"
+              variant="outlined"
+              aria-label="Enter your email address"
+              placeholder="Your email address"
+              inputProps={{
+                autoComplete: "off",
+                "aria-label": "Enter your email address",
+              }}
+              name="email"
+            />
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              alignSelf="center"
+              spacing={1}
+              useFlexGap
+              sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
+            >
+              <Button type="submit" variant="contained" color="primary">
+                Start now
+              </Button>
+            </Stack>
+          </form>
           <Typography
             variant="caption"
             textAlign="center"
@@ -98,6 +132,7 @@ export default function Hero() {
             </Link>
           </Typography>
         </Stack>
+        <Stack></Stack>
       </Container>
     </Box>
   );

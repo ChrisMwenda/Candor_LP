@@ -21,12 +21,13 @@ const Comparison = () => {
     <Grid container justifyContent="center">
       
       <Grid item xs={12} md={6} justifyContent="center">
+       
+        <Card variant="outlined" sx={{mt:"5%"}}>
         <Tabs
           tabs={["Without Candor", "With Candor"]}
           defaultTab="Without Candor"
           onSelect={handleTabChange}
         />
-        <Card variant="outlined" sx={{mt:"5%"}}>
           <CardContent>
             <Typography variant="subtitle1" textAlign="center">
               {statusTab === "With Candor"

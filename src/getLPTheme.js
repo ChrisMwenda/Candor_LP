@@ -7,13 +7,12 @@ export const brand = {
   200: '#9CCCFC',
   300: '#55A6F6',
   400: '#0A66C2',
-  500: '#0959AA',
-  600: '#064079',
-  700: '#033363',
-  800: '#02294F',
-  900: '#021F3B',
+  500: '#5403a8', // Updated to purple base color
+  600: '#4B0397', // Adjusted shades accordingly
+  700: '#3F027A',
+  800: '#35025E',
+  900: '#2B0243',
 };
-
 export const secondary = {
   50: '#F9F0FF',
   100: '#E9CEFD',
@@ -57,15 +56,15 @@ const getDesignTokens = (mode) => ({
   palette: {
     mode,
     primary: {
-      light: brand[200],
-      main: brand[500],
-      dark: brand[800],
-      contrastText: brand[50],
+      light: secondary[200],
+      main: secondary[500],
+      dark: secondary[800],
+      contrastText: secondary[50],
       ...(mode === 'dark' && {
-        contrastText: brand[100],
-        light: brand[300],
-        main: brand[400],
-        dark: brand[800],
+        contrastText: secondary[100],
+        light: secondary[300],
+        main: secondary[400],
+        dark: secondary[800],
       }),
     },
     secondary: {

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Logo from "./Assets/CandorHR.png"
-
+import Logo from "./Assets/KodiTrack Logo.svg"
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';

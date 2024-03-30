@@ -19,7 +19,7 @@ const tiers = [
     description: [
       '1 user included',
       '3 job openings per year',
-      '200 job applications',
+      'Up to 100 job only',
       'Help center access',
       'Email support',
     ],
@@ -27,30 +27,72 @@ const tiers = [
     buttonVariant: 'outlined',
   },
   {
-    title: 'Professional',
+    title: 'BASIC',
     subheader: 'Recommended',
     price: '15',
     description: [
+      'Perfect for testing the waters and getting started with Candor',
       '3 users included',
-      '100 job openings per year',
-      'Unlimited Job Applications',
+      '1000 Job Applications per year',
       'Help center access',
       'Priority email support',
-      'Dedicated team',
-      'Best deals',
+      'Dedicated team'
+    ],
+    buttonText: 'Start now',
+    buttonVariant: 'contained',
+  },
+  {
+    title: 'BASIC',
+    price: '50',
+    description: [
+      'Designed for businesses hiring 5-10 people annually, with around 100 applications per job',
+      '3 users included',
+      '1000 Job Applications per year',
+      'Help center access',
+      'Priority email support',
+      'Dedicated team'
+    ],
+    buttonText: 'Start now',
+    buttonVariant: 'contained',
+  },
+  {
+    title: 'CANDOR PLUS',
+    subheader: 'Recommended',
+    price: '120',
+    description: [
+      'Ideal for companies hiring between 10-50 people annually',
+      '5 users included',
+      '10,000 Job Applications per year',
+      'Help center access',
+      'Priority email support',
+      'Dedicated team'
+    ],
+    buttonText: 'Start now',
+    buttonVariant: 'contained',
+  },
+  {
+    title: 'CANDOR PREMIUM',
+    subheader: 'Recommended',
+    price: '350',
+    description: [
+      'Tailored for established firms with a strong reputation, hiring up to 100 people per year. Best for large recruiting teams',
+      '10 users included',
+      '10,000 Job Applications per year',
+      'Help center access',
+      'Priority email support',
+      'Dedicated team'
     ],
     buttonText: 'Start now',
     buttonVariant: 'contained',
   },
   {
     title: 'Enterprise',
-    price: '30',
+    price: 'Custom',
     description: [
       '5 users',
-      'Unlimited job openings',
-      'Unlimited job applications',
-      'Help center access',
-      'Phone & email support',
+      'Custom pricing',
+      'Designed for large companies with high-volume hiring needs',
+      'Contact us for personalized solutions tailored to your company requirements'
     ],
     buttonText: 'Contact us',
     buttonVariant: 'outlined',
@@ -155,7 +197,7 @@ export default function Pricing() {
                     ${tier.price}
                   </Typography>
                   <Typography component="h3" variant="h6">
-                    &nbsp; per month
+                    &nbsp; per year
                   </Typography>
                 </Box>
                 <Divider
