@@ -59,11 +59,12 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Candor is an AI-powered platform designed to streamline
-              the recruitment process by providing personalized feedback to job
-              applicants. Our app helps employers deliver constructive feedback
-              to every applicant, enhancing the candidate experience and
-              improving employer branding.
+              Candor is an AI-powered platform designed to make it easy for any
+              hiring managers or recruiters of any kind give personalized,
+              constructive feedback to job applicants.Candor utilizes AI
+              technology to generate personalized, constructive feedback for
+              applicants within seconds, eliminating the time and effort
+              required to craft individual responses.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -86,12 +87,12 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Candor leverages artificial intelligence to analyze
-              simple notes provided by recruiters and convert them into
-              detailed, personalized feedback for each applicant. Recruiters can
-              input their observations about an applicant's strengths,
-              weaknesses, and qualifications, and our app generates customized
-              feedback tailored to each individual.
+              Candor leverages artificial intelligence to analyze simple notes
+              provided by recruiters and convert them into detailed,
+              personalized feedback for each applicant. Recruiters can input
+              their observations about an applicant's strengths, weaknesses, and
+              qualifications, and our app generates customized feedback tailored
+              to each individual.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -114,12 +115,9 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Personalized feedback demonstrates professionalism, respect, and
-              transparency in the hiring process. It helps candidates understand
-              why they were not selected for a position and provides valuable
-              insights for their professional development. Additionally,
-              personalized feedback can enhance employer branding and attract
-              top talent to your organization.
+              Personalized feedback demonstrates professionalism and respect for
+              candidates. It encourages more applications and improves the odds
+              of discovering exceptional talent.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -133,7 +131,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is Candor suitable for all types of job applications?
+              Is Candor suitable for all types of applications?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -142,12 +140,8 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Yes, Candor is designed to support a wide range of job
-              applications across various industries and roles. Whether you're
-              hiring for entry-level positions or executive roles, our app can
-              help you provide personalized feedback to applicants at any stage
-              of the recruitment process.
-            </Typography>
+              Yes, Candor is designed to support applications of any kind. Whether you're
+              hiring for entry-level positions, recruiting startups for your accelerator or handling school applications, our app is trained to help you provide personalized feedback to applicants of any kind.            </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -160,8 +154,7 @@ export default function FAQ() {
             id="panel5d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How can I integrate Candor with my existing recruitment
-              workflow?
+              How can I integrate Candor with my existing recruitment workflow?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -170,15 +163,11 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Candor offers flexible integration options to seamlessly
-              integrate with your existing recruitment systems and processes.
-              Our app can be integrated with popular Applicant Tracking Systems
-              (ATS), email platforms, and other HR software tools to streamline
-              the feedback process and enhance efficiency.
-            </Typography>
+              We want to make your experience using Candor smooth and easy. Let us know what software or systems you currently use and we will work on an integration. 
+              </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
+        {/* <Accordion
           expanded={expanded === "panel6"}
           onChange={handleChange("panel6")}
         >
@@ -197,14 +186,14 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Yes, Candor takes data privacy and security seriously. We
-              adhere to strict data protection regulations and implement robust
+              Yes, Candor takes data privacy and security seriously. We adhere
+              to strict data protection regulations and implement robust
               security measures to safeguard user data. Our app is designed to
               comply with GDPR, CCPA, and other applicable data privacy laws to
               ensure the confidentiality and integrity of user information.
             </Typography>
           </AccordionDetails>
-        </Accordion>
+        </Accordion> */}
         <Accordion
           expanded={expanded === "panel7"}
           onChange={handleChange("panel7")}
@@ -224,12 +213,9 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Getting started with Candor is easy! Simply sign up for
-              an account on our website, integrate the app with your existing
-              systems, and start providing personalized feedback to your job
-              applicants. Our user-friendly interface and intuitive features
-              make it simple to streamline your recruitment process and enhance
-              the candidate experience.
+              Getting started with Candor is easy! Simply sign up for an account
+              on our website, and
+              start providing personalized feedback to your job applicants. 
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -252,11 +238,11 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Yes, Candor allows you to customize the feedback
-              generated for each applicant based on your preferences and
-              requirements. You can edit the feedback text, add additional
-              comments or observations, and tailor the feedback to suit the
-              specific needs of your organization and the candidate.
+              Yes, Candor allows you to customize the feedback generated for
+              each applicant based on your preferences and requirements. You can
+              edit the feedback text, add additional comments or observations,
+              and tailor the feedback to suit the specific needs of your
+              organization and the candidate.
             </Typography>
           </AccordionDetails>
         </Accordion>

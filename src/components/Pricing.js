@@ -14,87 +14,15 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 const tiers = [
   {
-    title: 'Free',
-    price: '0',
+    title: 'Every new user gets',
+    price: '100',
     description: [
       '1 user included',
-      '3 job openings per year',
-      'Up to 100 job only',
       'Help center access',
       'Email support',
+      'Free templates'
     ],
     buttonText: 'Sign up for free',
-    buttonVariant: 'outlined',
-  },
-  {
-    title: 'BASIC',
-    subheader: 'Recommended',
-    price: '15',
-    description: [
-      'Perfect for testing the waters and getting started with Candor',
-      '3 users included',
-      '1000 Job Applications per year',
-      'Help center access',
-      'Priority email support',
-      'Dedicated team'
-    ],
-    buttonText: 'Start now',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'BASIC',
-    price: '50',
-    description: [
-      'Designed for businesses hiring 5-10 people annually, with around 100 applications per job',
-      '3 users included',
-      '1000 Job Applications per year',
-      'Help center access',
-      'Priority email support',
-      'Dedicated team'
-    ],
-    buttonText: 'Start now',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'CANDOR PLUS',
-    subheader: 'Recommended',
-    price: '120',
-    description: [
-      'Ideal for companies hiring between 10-50 people annually',
-      '5 users included',
-      '10,000 Job Applications per year',
-      'Help center access',
-      'Priority email support',
-      'Dedicated team'
-    ],
-    buttonText: 'Start now',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'CANDOR PREMIUM',
-    subheader: 'Recommended',
-    price: '350',
-    description: [
-      'Tailored for established firms with a strong reputation, hiring up to 100 people per year. Best for large recruiting teams',
-      '10 users included',
-      '10,000 Job Applications per year',
-      'Help center access',
-      'Priority email support',
-      'Dedicated team'
-    ],
-    buttonText: 'Start now',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Enterprise',
-    price: 'Custom',
-    description: [
-      '5 users',
-      'Custom pricing',
-      'Designed for large companies with high-volume hiring needs',
-      'Contact us for personalized solutions tailored to your company requirements'
-    ],
-    buttonText: 'Contact us',
     buttonVariant: 'outlined',
   },
 ];
@@ -194,10 +122,10 @@ export default function Pricing() {
                   }}
                 >
                   <Typography component="h3" variant="h2">
-                    ${tier.price}
+                    {tier.price}
                   </Typography>
                   <Typography component="h3" variant="h6">
-                    &nbsp; per year
+                    &nbsp; free credits 
                   </Typography>
                 </Box>
                 <Divider

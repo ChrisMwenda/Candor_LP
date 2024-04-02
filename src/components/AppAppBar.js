@@ -88,7 +88,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 style={logoStyle}
                 alt="logo of sitemark"
               />
-              <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+              {/* <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
                   onClick={() => scrollToSection('features')}
                   sx={{ py: '6px', px: '12px' }}
@@ -129,7 +129,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                     FAQ
                   </Typography>
                 </MenuItem>
-              </Box>
+              </Box> */}
             </Box>
             <Box
               sx={{

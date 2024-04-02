@@ -14,31 +14,43 @@ import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 import OldWay from "./Assets/candor_current_mail.png";
 import NewWay from "./Assets/With_Candor.png";
+import img1 from "../components/Assets/IMG4.png";
+import img2 from "../components/Assets/IMAGE3.png";
+
+import {
+  FaHandHoldingHeart,
+  FaMedal,
+  FaStar,
+  FaRocket,
+  FaBlackTie,
+  FaExchangeAlt,
+} from "react-icons/fa";
+import { MdSchool, MdRocketLaunch } from "react-icons/md";
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: "Humanize Your Recruitment Process",
+    icon: <FaBlackTie size={"3em"} />,
+    title: "Job Applications",
     description:
-      "Stop ghosting applicants, and give personalized feedback that shows you care about every applicant..",
-    imageLight: OldWay,
-    imageDark: OldWay,
-  },
-  {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: "Build Your Brand",
-    description:
-      "Impress candidates with your professionalism and commitment to providing a positive candidate experience",
+      "Put an end to ghosting applicants. Offer personalized feedback that demonstrates your commitment to every candidate's journey.",
     imageLight: NewWay,
     imageDark: NewWay,
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: "Stand Out From the Rest",
+    icon: <MdSchool size={"3em"} color="secondary.light" />,
+    title: "School Applications",
     description:
-      "Everyone else uses the same cookie cutter rejection emails. Stand out from the competition and attract top talent by demonstrating your respect and value for candidates",
-    imageLight: OldWay,
-    imageDark: OldWay,
+      "Applying to schools can be incredibly nerve-wracking. Soften the blow with personalized, constructive feedback that shows you understand the importance of this milestone.",
+    imageLight: img2,
+    imageDark: img2,
+  },
+  {
+    icon: <MdRocketLaunch size={"3em"} />,
+    title: "Startup Accelerators, Incubators, and Investors",
+    description:
+      "Startup founders invest countless hours preparing pitches and applications. They deserve more than a 'no thanks' or being left in the dark. Provide the feedback they need to grow and improve.",
+    imageLight: img1,
+    imageDark: img1,
   },
 ];
 
@@ -57,16 +69,18 @@ export default function Features() {
         <Grid item xs={12} md={4}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              Product features
+              Use Cases
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Here you can provide a brief overview of the key features of the
-              product. For example, you could list the number of features, the
-              types of features, add-ons, or the benefits of the features.
+              Candor is designed to support applications of any kind. Whether
+              you're hiring for entry-level positions, recruiting startups for
+              your accelerator or handling school applications, our model is
+              trained to help you provide personalized feedback to applicants of
+              any kind.
             </Typography>
           </div>
           <Grid
@@ -112,15 +126,18 @@ export default function Features() {
           >
             <Box
               sx={{
+                m: "auto",
+                width: "100%",
+                height: 500,
+                backgroundSize: "contain", // Change to contain to fit the full image without getting cut off
+                backgroundRepeat: "no-repeat",
                 backgroundImage: (theme) =>
                   theme.palette.mode === "light"
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                minHeight: 280,
+                    ? `url(${selectedFeature.imageLight})`
+                    : `url(${selectedFeature.imageDark})`,
               }}
             />
+
             <Box sx={{ px: 2, pb: 2 }}>
               <Typography
                 color="text.primary"
@@ -272,7 +289,7 @@ export default function Features() {
             <Box
               sx={{
                 m: "auto",
-                width:"100%",
+                width: "100%",
                 height: 500,
                 backgroundSize: "cover", // Change to cover to magnify the image
                 backgroundRepeat: "no-repeat",

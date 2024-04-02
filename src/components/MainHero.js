@@ -26,9 +26,9 @@ export default function MainHero() {
       sx={(theme) => ({
         width: "100%",
         backgroundImage:
-        theme.palette.mode === "light"
-          ? "linear-gradient(180deg, #bff4f5,#d4bff5)"
-          : "linear-gradient(#42024f, #0f0910)",
+          theme.palette.mode === "light"
+            ? "linear-gradient(180deg, #bff4f5,#d4bff5)"
+            : "linear-gradient(#42024f, #0f0910)",
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
       })}
@@ -89,12 +89,17 @@ export default function MainHero() {
           </Typography>
 
           <form
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }} // Center the form
             onSubmit={handleSubmit}
             name="contact"
             method="post"
             netlify
             netlify-honeypot="bot-field"
-            hidden
+            // Remove the hidden attribute to make the form visible
           >
             <input type="hidden" name="form-name" value="contact" />
             <TextField
@@ -108,6 +113,7 @@ export default function MainHero() {
                 "aria-label": "Enter your email address",
               }}
               name="email"
+              sx={{ width: "75%" }} // Adjust width of text field
             />
             <Stack
               direction={{ xs: "column", sm: "row" }}
@@ -117,11 +123,12 @@ export default function MainHero() {
               sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
             >
               <Button type="submit" variant="contained" color="primary">
-                Start now
+               Register for Beta
               </Button>
             </Stack>
           </form>
-          <Typography
+
+          {/* <Typography
             variant="caption"
             textAlign="center"
             sx={{ opacity: 0.8 }}
@@ -130,7 +137,7 @@ export default function MainHero() {
             <Link href="#" color="primary">
               Terms & Conditions
             </Link>
-          </Typography>
+          </Typography> */}
         </Stack>
         <Stack></Stack>
       </Container>
