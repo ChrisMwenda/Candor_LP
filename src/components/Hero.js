@@ -62,7 +62,7 @@ export default function Hero() {
             </Typography>
           </Typography>
           <Typography variant="body1" textAlign="center" color="text.secondary">
-            We get it...You're{" "}
+            We know you're not.....  We know that you're{" "}
             <span style={{ fontWeight: "bold" }}>
               {" "}
               sorting through 100s of applications, racing against deadlines,
@@ -77,16 +77,6 @@ export default function Hero() {
             Even worse, they'll tell their friends about it.
           </Typography>
         
-          <Typography
-            variant="caption"
-            textAlign="center"
-            sx={{ opacity: 0.8 }}
-          >
-            By clicking &quot;Start now&quot; you agree to our&nbsp;
-            <Link href="#" color="primary">
-              Terms & Conditions
-            </Link>
-          </Typography>
         </Stack>
       </Container>
     </Box>

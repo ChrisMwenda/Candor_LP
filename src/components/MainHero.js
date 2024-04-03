@@ -89,43 +89,10 @@ export default function MainHero() {
             candidates of applicants within seconds.
           </Typography>
 
-          <form
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }} // Center the form
-            name="contact"
-            method="post"
-            data-netlify="true" // Enable Netlify form handling
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            
-            <TextField
-              id="outlined-basic"
-              label="Your email address"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
-              inputProps={{
-                autoComplete: "off",
-                "aria-label": "Enter your email address",
-              }}
-              name="email"
-              sx={{ width: "75%" }} // Adjust width of text field
-            />
-            <Stack
-              direction={{ xs: "column", sm: "row" }}
-              alignSelf="center"
-              spacing={1}
-              useFlexGap
-              sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
-            >
-              <Button type="submit" variant="contained" color="primary">
-                Register for Beta
+          <Button type="submit" variant="contained" color="primary" width="50%">
+                Get Started for Free
               </Button>
-            </Stack>
-          </form>
+
 
           {/* <Typography
             variant="caption"
