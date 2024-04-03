@@ -3,15 +3,15 @@ import { CssBaseline, ThemeProvider, createTheme, Divider, Box } from '@mui/mate
 import AppAppBar from './components/AppAppBar';
 import Hero from './components/Hero';
 import MainHero from './components/MainHero';
-import LogoCollection from './components/LogoCollection';
+// import LogoCollection from './components/LogoCollection';
 import Highlights from './components/Highlights';
-import Pricing from './components/Pricing';
+// import Pricing from './components/Pricing';
 import Features from './components/Features';
 // import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import getLPTheme from './getLPTheme';
-import Body from './components/Body';
+// import Body from './components/Body';
 import Comparison from './components/Comparison';
 
 

@@ -2,23 +2,23 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
+// import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
 export default function MainHero() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => alert("Form successfully submitted!"))
-      .catch((error) => alert(error));
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const formData = new FormData(event.target);
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: new URLSearchParams(formData).toString(),
+  //   })
+  //     .then(() => alert("Form successfully submitted!"))
+  //     .catch((error) => alert(error));
+  // };
 
   return (
     <Box
@@ -47,6 +47,7 @@ export default function MainHero() {
             style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}
           >
             <iframe
+              title="Candor Demo"
               src="https://www.loom.com/embed/6492f66aa17549f4b28f812f76e41339?sid=b5c93515-926f-4796-bbbb-26c8908315ad"
               frameBorder="0"
               allowFullScreen
@@ -94,14 +95,12 @@ export default function MainHero() {
               flexDirection: "column",
               alignItems: "center",
             }} // Center the form
-            onSubmit={handleSubmit}
             name="contact"
             method="post"
-            netlify
-            netlify-honeypot="bot-field"
-            // Remove the hidden attribute to make the form visible
+            data-netlify="true" // Enable Netlify form handling
           >
             <input type="hidden" name="form-name" value="contact" />
+            
             <TextField
               id="outlined-basic"
               label="Your email address"
@@ -123,7 +122,7 @@ export default function MainHero() {
               sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
             >
               <Button type="submit" variant="contained" color="primary">
-               Register for Beta
+                Register for Beta
               </Button>
             </Stack>
           </form>

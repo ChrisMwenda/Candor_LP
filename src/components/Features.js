@@ -9,21 +9,12 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
-import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
-import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
-import OldWay from "./Assets/candor_current_mail.png";
 import NewWay from "./Assets/With_Candor.png";
 import img1 from "../components/Assets/IMG4.png";
 import img2 from "../components/Assets/IMAGE3.png";
 
 import {
-  FaHandHoldingHeart,
-  FaMedal,
-  FaStar,
-  FaRocket,
-  FaBlackTie,
-  FaExchangeAlt,
+FaBlackTie,
 } from "react-icons/fa";
 import { MdSchool, MdRocketLaunch } from "react-icons/md";
 
