@@ -144,7 +144,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 variant="text"
                 size="small"
                 component="a"
-                href="/material-ui/getting-started/templates/sign-in/"
+                href="https://client.candor-ai.com/auth/login"
                 target="_blank"
               >
                 Sign in
@@ -154,7 +154,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 variant="contained"
                 size="small"
                 component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
+                href="https://client.candor-ai.com/auth/register"
                 target="_blank"
               >
                 Sign up
